@@ -1,0 +1,17 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.env
+.env.*
+!*.env.example
+*.pem
+*.key
+credentials*
+venv/
+.venv/
+target/
+build/
+*.gguf
+*.pt
+*.safetensors
