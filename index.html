@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hazaribagh 3D Open-World Engine | GTA Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body, html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #0c131f;
+        font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #engine-loader {
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at center, #1b263b 0%, #0d1b2a 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #e0e1dd;
+        z-index: 9999;
+        transition: opacity 0.6s ease;
+      }
+      .loader-title {
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 4px;
+        color: #00f5d4;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        text-shadow: 0 0 20px rgba(0, 245, 212, 0.5);
+      }
+      .loader-subtitle {
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #ffb703;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+      }
+      .loader-bar-bg {
+        width: 280px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .loader-bar-fill {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #00f5d4, #ffb703);
+        animation: pulseBar 1.2s infinite ease-in-out alternate;
+      }
+      @keyframes pulseBar {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(100%); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="engine-loader">
+      <div class="loader-title">HAZARIBAGH OPEN-WORLD</div>
+      <div class="loader-subtitle">Streaming Real GIS Topology & KalaChakra Loop...</div>
+      <div class="loader-bar-bg">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+
+    <script type="module">
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const loader = document.getElementById('engine-loader');
+          if (loader) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.remove(), 600);
+          }
+        }, 1200);
+      });
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

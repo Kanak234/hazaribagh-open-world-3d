@@ -1,0 +1,33 @@
+{
+  "name": "hazaribagh-open-world-3d",
+  "version": "1.0.0",
+  "description": "Production-grade 3D GTA-style Open-World Game Engine mapped to real-world Hazaribagh, Jharkhand, India",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "fetch-osm": "python3 scripts/ingest_osm_hazaribagh.py"
+  },
+  "keywords": [
+    "open-world",
+    "gta",
+    "game-engine",
+    "threejs",
+    "physics",
+    "hazaribagh",
+    "spatial-octree",
+    "handling"
+  ],
+  "author": "Antigravity Systems Engineering",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "@types/three": "^0.180.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.3.0"
+  }
+}
