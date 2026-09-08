@@ -32,3 +32,6 @@ jobs:
       # The project's own build command runs TypeScript followed by Vite bundling.
       - name: Build application
         run: npm run build
+
+      - name: Run tests
+        run: npm test
